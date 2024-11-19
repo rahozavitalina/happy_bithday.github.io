@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  .message {
+    text-align: center;
+    z-index: 10;
+    max-width: 90%; /* Ограничиваем ширину текста */
+    padding: 20px;  /* Отступы вокруг текста */
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2); /* Лёгкий фон */
+  }
+  
+  .message h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .message p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.5; /* Увеличиваем межстрочное расстояние */
+    white-space: pre-line; /* Сохраняем переносы */
+  }
+  
+  audio {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Уменьшаем ширину для телефонов */
+  }
+  
+  /* Адаптация для мобильных устройств */
+  @media (max-width: 768px) {
+    .message h1 {
+      font-size: 2rem; /* Уменьшаем шрифт заголовка */
+    }
+    .message p {
+      font-size: 1rem; /* Уменьшаем размер шрифта текста */
+    }
+    audio {
+      bottom: 20px; /* Поднимаем плеер чуть выше */
+    }
+  }
+  
